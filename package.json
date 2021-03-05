@@ -1,0 +1,17 @@
+{
+  "name": "encyclopedia-twitter-project",
+  "version": "1.0.0",
+  "description": "this is twitter bot for encyclopedia twitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "twit": "^2.2.11",
+    "wikijs": "^6.0.1"
+  }
+}
