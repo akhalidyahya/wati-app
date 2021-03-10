@@ -29,7 +29,7 @@ async function getWiki(tweet) {
           })
           .then(data=>{
             // console.log(data.pages);
-            let sourceImgUrl = 'en.wikipedia.org/wiki/Wikipedia_logo#/media/File:Wikipedia_Logo_1.0.png';
+            let sourceImgUrl = '//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/800px-Wikipedia_Logo_1.0.png';
             let imgUrl = '';
             let desc = '';
             let mainUrl = '';
