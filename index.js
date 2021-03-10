@@ -29,12 +29,16 @@ async function getWiki(tweet) {
           })
           .then(data=>{
             // console.log(data.pages);
-            let sourceImgUrl = '';
+            let sourceImgUrl = 'en.wikipedia.org/wiki/Wikipedia_logo#/media/File:Wikipedia_Logo_1.0.png';
             let imgUrl = '';
             let desc = '';
             let mainUrl = '';
             if(data.pages.length > 0){
-              sourceImgUrl = (data.pages[0].thumbnail.url != null) ? data.pages[0].thumbnail.url : 'en.wikipedia.org/wiki/Wikipedia_logo#/media/File:Wikipedia_Logo_1.0.png';
+              if(data.pages[0].thumbnail != null) {
+                if(data.pages[0].thumbnail.url != null) {
+                  sourceImgUrl = data.pages[0].thumbnail.url;
+                }
+              }
               imgUrl = 'https:'+sourceImgUrl;
               desc = (data.pages[0].description != null) ? data.pages[0].description : data.pages[0].title;
               mainUrl = 'https://id.wikipedia.org/wiki/'+data.pages[0].key;
