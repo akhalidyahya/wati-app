@@ -22,7 +22,7 @@ stream.on('tweet', function (tweet) {
 
 async function getWiki(tweet) {
   let search_param = tweet.text.replace('@akhalidyahya !cari ','');
-  let idSource  = tweet.id_str;
+  let idSource  = tweet.id;
   let data = await fetch(wikiApi.replace('(:param)',search_param))
           .then(res=>{
             return res.json();
